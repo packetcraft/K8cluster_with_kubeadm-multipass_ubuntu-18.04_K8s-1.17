@@ -1,6 +1,4 @@
-![kubeadm-multipass.png](kubeadm-multipass.png)
-
-# Multi-Node Kubernetes 1.17.4 with kubeadm on local multipass cloud with Docker
+# Multi-Node Kubernetes 1.17.4 with kubeadm on local multipass ubuntu 18.04 cloud with Docker
 
 These simple scripts deploy a multi-node Kubernetes 1.17.4 with kubeadm on multipass VMs with Docker on your local machine in about 6 minutes, depending on your internet speed.
 
@@ -51,7 +49,6 @@ Total runtime in minutes was: 06:30
 
 ```bash
 cp  kubeconfig.yaml /Users/xxxxxxx/.kube/config
-kubectl get nodes
 ```
 
 ## Install MetalLB
