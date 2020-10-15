@@ -21,6 +21,9 @@ https://github.com/CanonicalLtd/multipass/releases
 Deploy the master node, 2 worker nodes and join the worker nodes into the cluster step by step:
 
 ```bash
+#make teh script executable 
+chmod 755 1-deploy-kubeadm-master.sh
+
 ./1-deploy-kubeadm-master.sh
 ./2-deploy-kubeadm-nodes.sh
 ./3-kubeadm_join_nodes.sh
