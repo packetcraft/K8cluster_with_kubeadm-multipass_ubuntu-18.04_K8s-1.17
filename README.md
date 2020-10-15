@@ -54,7 +54,14 @@ Total runtime in minutes was: 06:30
 ## Copy the locally created kubeconfig files to be avaibale system wide
 
 ```bash
+#the kubernetes credential details are in the file 'kubeconfig.yaml' in the local folder.
+#You can use this file to run kubect commands 
+KUBECONFIG=kubeconfig.yaml kubectl get nodes
+
+# you can also copy the locally created kubeconfig files to be avaibale as a default context system wide
 cp  kubeconfig.yaml /Users/xxxxxxx/.kube/config
+# then you can run kubectl normally
+kubectl get nodes
 ```
 
 ## Install MetalLB
