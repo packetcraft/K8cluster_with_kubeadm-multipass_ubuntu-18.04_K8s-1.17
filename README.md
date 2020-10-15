@@ -23,7 +23,10 @@ Deploy the master node, 2 worker nodes and join the worker nodes into the cluste
 ```bash
 #make teh script executable 
 chmod 755 1-deploy-kubeadm-master.sh
+chmod 755 2-deploy-kubeadm-nodes.sh
+chmod 755 3-kubeadm_join_nodes.sh
 
+#execute teh script
 ./1-deploy-kubeadm-master.sh
 ./2-deploy-kubeadm-nodes.sh
 ./3-kubeadm_join_nodes.sh
