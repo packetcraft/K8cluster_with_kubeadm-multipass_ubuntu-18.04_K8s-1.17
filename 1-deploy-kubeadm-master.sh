@@ -31,5 +31,5 @@ echo "now deploying calico ...."
 KUBECONFIG=kubeconfig.yaml kubectl create -f calico.yaml
 KUBECONFIG=kubeconfig.yaml kubectl rollout status daemonset calico-node -n kube-system
 KUBECONFIG=kubeconfig.yaml kubectl get nodes -o wide
-echo "Enjoy the kubeadm made Kubernetes 1.6.x on Multipass"
+echo "Enjoy the kubeadm made Kubernetes 1.17.x on Multipass ubuntu 18.04"
 echo "Now deploying the worker nodes"
