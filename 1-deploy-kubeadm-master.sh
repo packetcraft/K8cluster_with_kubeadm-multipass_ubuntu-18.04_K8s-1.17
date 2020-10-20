@@ -24,11 +24,12 @@ multipass exec master5 -- bash -c 'sudo sysctl net.bridge.bridge-nf-call-iptable
 multipass exec master5 -- bash -c 'sudo kubeadm init --kubernetes-version=v1.17.4 --pod-network-cidr=192.178.0.0/16'
 multipass exec master5 -- bash -c 'sudo cat /etc/kubernetes/admin.conf' > kubeconfig.yaml
 export KUBECONFIG=kubeconfig.yaml
+
+echo "now deploying calico ...."
 # KUBECONFIG=kubeconfig.yaml kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
 KUBECONFIG=kubeconfig.yaml kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
-echo "now deploying calico ...."
-KUBECONFIG=kubeconfig.yaml kubectl create -f calico.yaml
+#KUBECONFIG=kubeconfig.yaml kubectl create -f calico.yaml
 KUBECONFIG=kubeconfig.yaml kubectl rollout status daemonset calico-node -n kube-system
 KUBECONFIG=kubeconfig.yaml kubectl get nodes -o wide
 echo "Enjoy the kubeadm made Kubernetes 1.17.x on Multipass ubuntu 18.04"
