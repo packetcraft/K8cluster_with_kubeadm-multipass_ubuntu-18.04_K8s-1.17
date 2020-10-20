@@ -67,6 +67,7 @@ kubectl get nodes
 ## Install MetalLB
 
 ```bash
+chmod 755 install-metal-lb.sh
 ./install-metal-lb.sh
 ```
 
